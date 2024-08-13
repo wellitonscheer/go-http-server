@@ -26,7 +26,7 @@ func increment(num *int) {
 }
 
 func main() {
-	a := 1
+	a := 0
 
 	http.HandleFunc("/hello", hello)
 	http.HandleFunc("/increment", func(w http.ResponseWriter, r *http.Request) { increment(&a); fmt.Fprintf(w, "number a: %v\n", a) })
